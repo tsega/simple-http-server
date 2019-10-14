@@ -21,6 +21,7 @@ let blogs = [
     content: "My fourth blog"
   }
 ];
+let port = process.env.PORT || 8000;
 
 let server = http.createServer((req, res) => {
   console.log(req.url);
@@ -49,5 +50,5 @@ let server = http.createServer((req, res) => {
   }
 });
 
-server.listen("8000");
-console.log("Server listening at 8000");
+server.listen(port);
+console.log(`Server listening at ${port}`);
